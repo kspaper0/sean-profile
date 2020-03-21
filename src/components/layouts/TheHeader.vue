@@ -15,7 +15,7 @@
       <div id="navbar-collapse-content" :class="['collapse', 'navbar-collapse', { in: showCollapsedNav}]">
         <ul class="nav navbar-nav">
           <li v-for="(item, index) in navList" :class="{ active: index === activeNavIdx }">
-            <a href="#" @click="clickActive(index)"> {{item}} </a>
+            <a :href="`#${item.link}`" @click="clickActive(index)"> {{ item.tab }} </a>
           </li>
         </ul>
         <form class="navbar-form navbar-right">
@@ -36,10 +36,32 @@ export default {
       logo: {
         title: 'Shuo\'s Profile'
       },
-      navList: ['Home', 'Profile', 'Projects', 'Skills'],
+      navList: [
+        {
+          tab: 'Home',
+          link: 'profile'
+        },
+        // {
+        //   tab: 'Profile',
+        //   link: 'profile'
+        // },
+        // {
+        //   tab: 'Projects',
+        //   link: 'porjects'
+        // },
+        {
+          tab: 'Skills',
+          link: 'skills'
+        }
+      ],
       activeNavIdx:0,
       showCollapsedNav: false
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('scroll', this.onScroll)
+    })
   },
   methods: {
     clickActive(index) {
@@ -47,6 +69,16 @@ export default {
     },
     toggleNav(){
       this.showCollapsedNav = !this.showCollapsedNav
+    },
+    onScroll(){
+      const scrolled = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+      // console.log(scrolled)
+      if (scrolled > 500) {
+        // console.log(scrolled)
+        this.activeNavIdx = 1;
+      } else {
+        this.activeNavIdx = 0;
+      }
     }
   }
 }

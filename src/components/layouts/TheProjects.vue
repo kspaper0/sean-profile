@@ -89,7 +89,7 @@ export default {
   },
   watch: {
     curWidth(value) {
-      console.log(value);
+      // console.log(value);
       const projects = document.getElementById('projects');
       // const parent = projects.parentNode;
       const mobile = document.getElementById('mobile');
