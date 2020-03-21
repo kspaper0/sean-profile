@@ -46,9 +46,9 @@ export default {
 </script>
 <style scoped>
   .active {
-    border: 2px solid black;
+    transform: scale(1.1);
   }
   .skill:hover {
-    opacity: 0.3;
+    border: 2px solid rgba(16,16,16,0.4)
   }
 </style>

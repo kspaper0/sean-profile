@@ -11,7 +11,7 @@
         <a @click="showMoreButton(index)" class="btn btn-link info" href="javascripte:;">More</a>
       </div>
     </div>
-    <Modal :show.sync="showMore" class="text-center">
+    <Modal id="myModal" :show.sync="showMore" class="text-center">
       <div slot="title">
         {{ projects[cur].title }}
       </div>
@@ -22,7 +22,7 @@
       </div>
     </Modal>
     <div class="mobile-projects" id="mobile">
-      <Accordion v-for="(item, index) in projects" :project="item.name" :color="item.color" :content="item.keyword" :key="index"></Accordion>
+      <Accordion v-for="(item, index) in projects" :project="item" :key="index"></Accordion>
     </div>
   </div>
 </template>
@@ -93,9 +93,11 @@ export default {
       const projects = document.getElementById('projects');
       // const parent = projects.parentNode;
       const mobile = document.getElementById('mobile');
+      const myModal = document.getElementById('myModal');
       if(value < 768)
       {
         projects.style.display="none";
+        myModal.style.display="none";
         mobile.style.display="";
       } else {
 
@@ -109,4 +111,9 @@ export default {
 </script>
 <style scoped>
 .projects .project small { font-size: 60%; }
+.mobile-projects {
+  min-height: 250px;
+  width: 85%;
+  margin: 0 auto;
+}
 </style>
