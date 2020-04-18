@@ -1,8 +1,8 @@
 <template>
   <div>、
     <transition
-    enter-active-class="animated bounceIn"
-    leave-active-class="animated bounceOut"
+    enter-active-class="animated zoomIn"
+    leave-active-class="animated rollOut"
     >
 
     <div v-show="show" class="modal" style="display:block" @click.self="close">
@@ -58,9 +58,21 @@ export default {
 </script>
 <style scoped>
 .animated {
-  animation-duration: .4s;
+  animation-duration: .5s;
 }
 .fade-enter, .fade-leave-to {
   opacity:9;
+}
+.modal-dialog {
+  width: 65%;
+  height:auto;
+}
+.modal-content {
+  background: #eee;
+}
+.modal-header {
+  height: 40px;
+  padding: 5px;
+  padding-top: 10px;
 }
 </style>

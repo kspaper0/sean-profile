@@ -50,9 +50,7 @@
     margin: 5px auto;
   }
   .closeIcon {
-    font-family: "open sans", sans-serif;
     color: #fff;
-    font-size: 20px;
     opacity: 0;
     filter: alpha(opacity=0);
   }

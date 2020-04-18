@@ -17,13 +17,16 @@
           <li v-for="(item, index) in navList" :class="{ active: index === activeNavIdx }">
             <a :href="`#${item.link}`" @click="clickActive(index)"> {{ item.tab }} </a>
           </li>
+          <li>
+            <a :href="logo.src" target="_blank">Sample</a>
+          </li>
         </ul>
-        <form class="navbar-form navbar-right">
+        <!-- <form class="navbar-form navbar-right">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search" name="search">
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
@@ -34,7 +37,8 @@ export default {
   data() {
     return {
       logo: {
-        title: 'Shuo\'s Profile'
+        title: 'Shuo\'s Profile',
+        src: 'https://kspaper0.github.io/vuejs-essential/dist/'
       },
       navList: [
         {
