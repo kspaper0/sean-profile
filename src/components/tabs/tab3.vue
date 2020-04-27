@@ -45,7 +45,5 @@
 <style scoped>
   .hobbies {
     height:20px;
-    list-style:disc;
-    text-indent: 25px;
   }
 </style>

@@ -59,7 +59,7 @@ export default {
           "sends emails for activating account and resetting password",
           "allows legal users to manage their info., blogs, followers and followings",
           "enables real-time communication through notification",
-          "introduces and optimises SEO"
+          "introduces and optimises with concept of SEO"
         ]
       },
       {
@@ -87,8 +87,8 @@ export default {
         pic: project3,
         title: 'An online shopping application (B2C mode) and ebay are little alike. The system:',
         desc: [
-          "requires users to register, to login, and to manage address list and order, etc.",
-          "performs multiple payment methods (i.e. Coupon, Crowd funding, installment & seckill)",
+          "requires users to register, to login, and to manage address list and orders, etc.",
+          "performs multiple payment methods (i.e. coupon, crowd funding, installment & seckill)",
           "has the payment & refund tested on sandbox provided by Alipay and notifies via email",
           "builds a complete background management system",
           "is capable of faceted search and offers consumers similar products",

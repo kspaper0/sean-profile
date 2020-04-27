@@ -18,7 +18,7 @@
           },
           {
             title: 'Concepts, Tools & Others',
-            content: 'MVC, MVVM, RESTful, Responsive Layout, SASS & LESS, Apache, Bootstrap, Photoshop, Linux, JWT & Passport, Postman, Git & GitHub, Nginx, NodeJS, NPM, WordPress'
+            content: 'MVC, MVVM, RESTful, Responsive Layout, SEO, SLB, SASS & LESS, Apache, Bootstrap, Photoshop, Linux, JWT & Passport, Postman, Git & GitHub, Nginx, NodeJS, NPM, WordPress'
           },
 
         ]
